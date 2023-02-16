@@ -1,0 +1,17 @@
+:root {
+	cursor: none;
+}
+
+body {
+	height: 100vh;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.cursor {
+	display: inline-block;
+}
+
+.cursor img {
+	transform: rotateZ(90deg);
+}
