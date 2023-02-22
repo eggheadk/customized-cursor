@@ -1,0 +1,36 @@
+@keyframes Animation {
+	0% {
+		transform: rotateZ(90deg) scale(1);
+	}
+
+	50% {
+		transform: rotateZ(90deg) translate(3px, -3px) scale(1.2);
+	}
+
+	100% {
+		transform: rotateZ(90deg) scale(1);
+	}
+}
+
+.cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: inline-block;
+	user-select: none;
+	cursor: none;
+
+	&:before {
+		position: absolute;
+		top: -5px;
+		left: -8px;
+		pointer-events: none;
+		width: 30px;
+		height: 30px;
+		background: no-repeat url(../../public/assets/cursor.png);
+		background-size: contain;
+		background-position: center;
+		animation: Animation 1.5s linear 0s infinite alternate;
+		content: '';
+	}
+}
